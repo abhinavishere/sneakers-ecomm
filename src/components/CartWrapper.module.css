@@ -1,0 +1,10 @@
+.cartWrapper {
+  margin-right: 2.4rem;
+}
+
+.cartIcon {
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  color: #666;
+  cursor: pointer;
+}
