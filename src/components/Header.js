@@ -4,13 +4,11 @@ import styles from "./Header.module.css";
 import NavList from "./NavList";
 import CartWrapper from "./CartWrapper";
 
-const navItems = ["Collections", "Men", "Women", "About", "Contact"];
-
 const Header = () => {
   return (
     <header className={styles.header}>
       <Logo src="/images/logo.svg" />
-      <NavList navItems={navItems} />
+      <NavList />
       <CartWrapper />
       <User src="/images/image-avatar.png" />
     </header>

@@ -2,16 +2,18 @@ import React from "react";
 // import NavItem from "./NavItem";
 import styles from "./NavList.module.css";
 
-const NavItem = ({ link, key }) => {
+const NavItem = ({ link }) => {
   return (
-    <li className={styles.navItem} id={`navitem-${key}`}>
-      <a href>{link}</a>
+    <li className={styles.navItem}>
+      <a href="/">{link}</a>
       <span className={styles.navActive}></span>
     </li>
   );
 };
 
-const NavList = ({ navItems }) => {
+const navItems = ["Collections", "Men", "Women", "About", "Contact"];
+
+const NavList = () => {
   return (
     <nav className={styles.nav}>
       <ul className={styles.navList}>
