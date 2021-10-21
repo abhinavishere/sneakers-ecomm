@@ -1,0 +1,8 @@
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-right: auto;
+  margin-left: 4rem;
+  /* border: 1px solid red; */
+}

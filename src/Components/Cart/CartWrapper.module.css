@@ -1,0 +1,11 @@
+.cartWrapper {
+  position: relative;
+}
+
+.cartLogo {
+  color: #888;
+}
+
+.cartLogo:hover {
+  color: #444;
+}
