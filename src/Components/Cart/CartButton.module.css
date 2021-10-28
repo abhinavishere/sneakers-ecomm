@@ -8,7 +8,8 @@
   border-radius: 15rem;
   display: flex;
   align-items: center;
-  margin-right: 3.6rem;
+  margin-left: auto;
+  margin-right: 1.2rem;
 }
 
 .cartButton:hover {
@@ -23,9 +24,10 @@
   position: absolute;
   top: 5%;
   right: 15%;
-  width: 1.8rem;
-  height: 1.8rem;
-  border-radius: 50%;
+  width: 2rem;
+  height: 1.6rem;
+  font-weight: 600;
+  border-radius: 3rem;
   text-align: center;
   background: var(--orange);
   color: #fff;
@@ -34,4 +36,10 @@
   align-items: center;
   font-size: 1rem;
   font-family: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .cartButton {
+    margin-right: 2.4rem;
+  }
 }

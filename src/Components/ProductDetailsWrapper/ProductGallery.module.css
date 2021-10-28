@@ -1,0 +1,36 @@
+.productGallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 50%;
+  width: 50%;
+  padding: 0 5.6rem;
+  gap: 3rem;
+}
+
+.productThumbnailsWrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.productMain,
+.productThumbnailsWrapper {
+  width: 100%;
+  max-width: 40rem;
+}
+
+.productMain,
+.productThumbnail {
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+/* .productThumbnail {
+  border: 3px solid transparent;
+} */
+
+.productThumbnail.selected {
+  border: 3px solid var(--orange);
+  background-color: var(--pale-orange);
+}

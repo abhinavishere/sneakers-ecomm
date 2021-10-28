@@ -13,7 +13,7 @@ const Header = () => {
         <Logo src={logo} alt="Sneakers" />
       </a>
       <NavBar />
-      <CartButton />
+      <CartButton count="3" />
       <AvatarWrapper>
         <Avatar src={avatar} alt="user avatar" />
       </AvatarWrapper>
@@ -28,6 +28,7 @@ const Logo = styled.img`
 const AvatarWrapper = styled.div`
   width: 4.6rem;
   height: 4.6rem;
+  cursor: pointer;
   /* border: 1px solid red; */
 `;
 

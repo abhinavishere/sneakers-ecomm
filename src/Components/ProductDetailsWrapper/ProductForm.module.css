@@ -1,0 +1,40 @@
+.productForm {
+  width: 100%;
+  max-width: 40rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.productFormControl {
+  /* border: 1px solid black; */
+  border-radius: 0.8rem;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 15rem;
+  background: var(--light-grayish-blue);
+  overflow: hidden;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1.2rem 0;
+}
+
+.productFormControl > button {
+  flex: 1 0 30%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  /* border: 1px solid black; */
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.productFormControl > span {
+  flex: 1 0 30%;
+  text-align: center;
+}

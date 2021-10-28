@@ -1,0 +1,21 @@
+.buttonComponent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: 1.4rem;
+  padding: 1.4rem 3.6rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: var(--orange);
+  font-family: var(--font-primary);
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buttonComponent img {
+  height: 1.4rem;
+  color: var(--pale-orange);
+}

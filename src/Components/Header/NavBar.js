@@ -6,7 +6,7 @@ const navMenu = ["Collections", "Men", "Women", "About", "Contact"];
 const NavItem = (props) => {
   return (
     <li className={classes.navItem}>
-      <a href="/" className={classes.navItemLink}>
+      <a href={`/${props.children}`} className={classes.navItemLink}>
         {props.children}
       </a>
     </li>

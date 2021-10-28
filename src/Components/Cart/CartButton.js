@@ -1,12 +1,12 @@
 import React from "react";
 import classes from "./CartButton.module.css";
-import CartIcon from "../../assets/icon-cart.svg";
+import CartIcon from "./CartIcon";
 
 const CartButton = (props) => {
   return (
     <button className={classes.cartButton}>
       <span className={classes.cartIcon}>
-        <img src={CartIcon} alt="CartIcon" />
+        <CartIcon />
       </span>
       {props.count && <span className={classes.cartLabel}>{props.count}</span>}
     </button>

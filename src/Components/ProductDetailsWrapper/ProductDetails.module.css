@@ -1,0 +1,52 @@
+.productDetails {
+  flex: 1 1 50%;
+  width: 50%;
+  font-family: var(--font-primary);
+}
+
+.companyName {
+  color: var(--orange);
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.8rem;
+}
+
+.productName {
+  font-size: 3.8rem;
+  letter-spacing: 0.75px;
+  line-height: 1;
+  margin-bottom: 1.8rem;
+}
+
+.productDesc {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--dark-grayish-blue);
+  width: 80%;
+  line-height: 1.5;
+  margin-bottom: 1.8rem;
+}
+
+.productMainPrice {
+  margin-bottom: 0.5rem;
+}
+
+.discount {
+  /* border: 1px solid red; */
+  padding: 0.5rem 1.2rem;
+  font-size: 1.6rem;
+  /* font-weight: 500s; */
+  border-radius: 0.8rem;
+  background-color: var(--pale-orange);
+  color: var(--orange);
+  margin-left: 2.5rem;
+}
+
+.productOriginalPrice {
+  color: var(--grayish-blue);
+  text-decoration: line-through;
+  font-size: 1.4rem;
+  margin-bottom: 1.8rem;
+}
