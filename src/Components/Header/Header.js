@@ -1,33 +1,38 @@
 import React from "react";
-import classes from "./Header.module.css";
+import styled from "styled-components";
 import logo from "../../assets/logo.svg";
 import NavBar from "./NavBar";
-import NavItem from "./NavItem";
-import CartWrapper from "../Cart/CartWrapper";
-import User from "../User/UserAvatar";
-import Button from "../UI/Button";
+import classes from "./Header.module.css";
+import CartButton from "../Cart/CartButton";
+import avatar from "../../assets/image-avatar.png";
 
-const Header = (props) => {
+const Header = () => {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>
-        <a href="/">
-          <img src={logo} alt="Sneakers Logo" />
-        </a>
-      </div>
-      <NavBar>
-        <NavItem href="/Collections" link="Collections" />
-        <NavItem href="/Men" link="Men" />
-        <NavItem href="/Women" link="Women" />
-        <NavItem href="/About" link="About" />
-        <NavItem href="/Contact" link="Contact" />
-      </NavBar>
-      <CartWrapper />
-      {props.user && <User userInfo={props.user} />}
-
-      {!props.user && <Button type="button">Login</Button>}
+      <a href="/">
+        <Logo src={logo} alt="Sneakers" />
+      </a>
+      <NavBar />
+      <CartButton />
+      <AvatarWrapper>
+        <Avatar src={avatar} alt="user avatar" />
+      </AvatarWrapper>
     </header>
   );
 };
+
+const Logo = styled.img`
+  max-width: 100%;
+`;
+
+const AvatarWrapper = styled.div`
+  width: 4.6rem;
+  height: 4.6rem;
+  /* border: 1px solid red; */
+`;
+
+const Avatar = styled.img`
+  max-width: 100%;
+`;
 
 export default Header;
