@@ -1,6 +1,4 @@
 .productDetails {
-  flex: 1 1 50%;
-  width: 50%;
   font-family: var(--font-primary);
 }
 
@@ -49,4 +47,11 @@
   text-decoration: line-through;
   font-size: 1.4rem;
   margin-bottom: 1.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .productDetails {
+    flex: 1 1 50%;
+    width: 50%;
+  }
 }

@@ -3,8 +3,8 @@ import styled from "styled-components";
 import logo from "../../assets/logo.svg";
 import NavBar from "./NavBar";
 import classes from "./Header.module.css";
-import CartButton from "../Cart/CartButton";
 import avatar from "../../assets/image-avatar.png";
+import CartWrapper from "../Cart/CartWrapper";
 
 const Header = () => {
   return (
@@ -13,7 +13,7 @@ const Header = () => {
         <Logo src={logo} alt="Sneakers" />
       </a>
       <NavBar />
-      <CartButton count="3" />
+      <CartWrapper />
       <AvatarWrapper>
         <Avatar src={avatar} alt="user avatar" />
       </AvatarWrapper>
