@@ -18,12 +18,12 @@ const ProductForm = (props) => {
     });
   };
 
-  const addItemHandler = (e) => {
+  const productFormSubmitHandler = (e) => {
     e.preventDefault();
-    console.log(counterState);
+    const item = { ...props, amount: counterState };
   };
   return (
-    <form className={classes.productForm} onSubmit={addItemHandler}>
+    <form className={classes.productForm} onSubmit={productFormSubmitHandler}>
       <div className={classes.productFormControl}>
         <button
           type="button"
@@ -42,7 +42,10 @@ const ProductForm = (props) => {
         </button>
       </div>
 
-      <ButtonComponent type="submit">
+      <ButtonComponent
+        type="submit"
+        styles={{ background: "var(--orange)", color: "var(--white)" }}
+      >
         <span>
           <ShoppingCartIcon style={{ color: "#fff" }} />
         </span>

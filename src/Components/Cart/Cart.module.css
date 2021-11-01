@@ -1,0 +1,28 @@
+.cartEmpty {
+  font-size: 2rem;
+  /* text-align: center; */
+  color: var(--dark-grayish-blue);
+  padding-block: 1.2rem;
+}
+
+.cartTotal {
+  padding-block: 1.2rem;
+  font-family: var(--font-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  /* margin-bottom: 1.6rem; */
+}
+.cartActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .cartForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

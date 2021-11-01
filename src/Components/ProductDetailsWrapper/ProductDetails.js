@@ -16,7 +16,7 @@ const ProductDetails = (props) => {
         <h4
           className={classes.productOriginalPrice}
         >{`$${props.originalPrice}.00`}</h4>
-        <ProductForm />
+        <ProductForm {...props} />
       </div>
     </div>
   );
