@@ -4,8 +4,11 @@ import classes from "./ButtonComponent.module.css";
 const ButtonComponent = (props) => {
   return (
     <button
-      className={classes.buttonComponent}
-      style={props.styles}
+      className={`${classes.buttonComponent} ${
+        props.primary
+          ? classes["buttonComponent--primary"]
+          : classes["buttonComponent--secondary"]
+      }`}
       type={props.type}
       onClick={props.onClick}
     >

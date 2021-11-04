@@ -10,14 +10,24 @@
   border: none;
   border-radius: 0.8rem;
   font-family: var(--font-primary);
-  /* color: var(--white); */
   font-weight: 600;
   cursor: pointer;
 }
 
-/* .buttonComponent:hover {
+.buttonComponent--primary {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.buttonComponent--secondary {
   background: var(--pale-orange);
-} */
+  color: var(--very-vark-blue);
+}
+
+.buttonComponent:hover {
+  background: var(--orange);
+  color: var(--white);
+}
 
 .buttonComponent img {
   height: 1.4rem;

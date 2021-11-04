@@ -1,40 +1,33 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Modal from "../UI/Modal";
 import CartItem from "./CartItem";
 import classes from "./Cart.module.css";
 import ButtonComponent from "../UI/ButtonComponent";
+import CartContext from "../../store/Cart-Context";
 
 const Cart = (props) => {
-  const [cartItems, setCartItems] = useState([]);
-  const totalPrice = cartItems.reduce((a, b) => {
-    return a + b.price;
-  }, 0);
+  const cartCtx = useContext(CartContext);
+  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+
   return (
     <Modal onOverlayClick={props.onOverlayClick}>
-      {cartItems && cartItems.map((item) => <CartItem {...item} />)}
-      {cartItems.length === 0 && (
-        <h3 className={classes.cartEmpty}>Your Cart is Empty</h3>
-      )}
+      <ul className={classes.cartList}>
+        {cartCtx.items && cartCtx.items.map((item) => <CartItem {...item} />)}
+        {cartCtx.items.length === 0 && (
+          <h3 className={classes.cartEmpty}>Your Cart is Empty</h3>
+        )}
+      </ul>
       <div className={classes.cartForm}>
-        <div className={classes.cartTotal}>Total : ${totalPrice || 0}</div>
+        <div className={classes.cartTotal}>Total: {totalAmount}</div>
         <div className={classes.cartActions}>
           <ButtonComponent
             type="button"
-            styles={{
-              background: "var(--pale-orange)",
-              color: "var(--vary-vark-blue)",
-            }}
+            primary={false}
             onClick={props.onOverlayClick}
           >
             Close
           </ButtonComponent>
-          <ButtonComponent
-            type="submit"
-            styles={{
-              background: "var(--orange)",
-              color: "var(--white)",
-            }}
-          >
+          <ButtonComponent type="submit" primary={true}>
             Place Order
           </ButtonComponent>
         </div>

@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
+import CartContext from "../../store/Cart-Context";
 import ShoppingCartIcon from "../UI/ShoppingCartIcon";
 import classes from "./CartButton.module.css";
-// import CartIcon from "./CartIcon";
 
 const CartButton = (props) => {
+  const cartCtx = useContext(CartContext);
+
+  const totalItemsInCart = cartCtx.items.reduce((a, b) => {
+    return a + b.amount;
+  }, 0);
+
   return (
     <button className={classes.cartButton} onClick={props.onClick}>
       <span className={classes.cartIcon}>
-        {/* <CartIcon /> */}
         <ShoppingCartIcon
           style={{ fontSize: "2.2rem", color: "var(--dark-grayish-blue)" }}
         />
       </span>
-      {props.count && <span className={classes.cartLabel}>{props.count}</span>}
+      <span className={classes.cartLabel}>{totalItemsInCart}</span>
     </button>
   );
 };

@@ -4,6 +4,7 @@ import ProductGallery from "./ProductGallery";
 import ProductDetails from "./ProductDetails";
 
 const productDetails = {
+  id: "p1",
   companyName: "Sneaker Company",
   productName: "Fall Limited Edition Sneakers",
   productDesc:
@@ -13,7 +14,7 @@ const productDetails = {
   originalPrice: 250,
 };
 
-const ProductDetailsWrapper = (props) => {
+const ProductDetailsWrapper = () => {
   return (
     <div className={classes.productWrapper}>
       <ProductGallery />

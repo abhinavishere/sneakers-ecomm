@@ -14,7 +14,8 @@
   width: 90%;
   max-height: 70%;
   background: #fff;
-  padding: 2.4rem;
+  border-radius: 8px;
+  padding: 1.8rem;
   z-index: 101;
 }
 
@@ -25,4 +26,10 @@
   color: var(--grayish-blue);
   z-index: 101;
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .modalOverlay {
+    padding: 2.4rem;
+  }
 }

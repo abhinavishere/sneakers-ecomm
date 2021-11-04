@@ -1,27 +1,35 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import classes from "./ProductForm.module.css";
 import ButtonComponent from "../UI/ButtonComponent";
 import ShoppingCartIcon from "../UI/ShoppingCartIcon";
-// import IconMinus from
+import CartContext from "../../store/Cart-Context";
 
 const ProductForm = (props) => {
   const [counterState, setCounterState] = useState(1);
-
   const incrementHandler = () => {
     setCounterState((prev) => {
       return prev + 1;
     });
   };
   const decrementHandler = () => {
-    setCounterState((prev) => {
-      return prev - 1;
-    });
+    if (counterState === 1) {
+      setCounterState(1);
+    } else {
+      setCounterState((prev) => {
+        return prev - 1;
+      });
+    }
   };
+
+  // Using Cart Context
+  const cartCtx = useContext(CartContext);
 
   const productFormSubmitHandler = (e) => {
     e.preventDefault();
     const item = { ...props, amount: counterState };
+    cartCtx.addItem(item);
   };
+
   return (
     <form className={classes.productForm} onSubmit={productFormSubmitHandler}>
       <div className={classes.productFormControl}>
@@ -42,10 +50,7 @@ const ProductForm = (props) => {
         </button>
       </div>
 
-      <ButtonComponent
-        type="submit"
-        styles={{ background: "var(--orange)", color: "var(--white)" }}
-      >
+      <ButtonComponent type="submit" primary={true}>
         <span>
           <ShoppingCartIcon style={{ color: "#fff" }} />
         </span>

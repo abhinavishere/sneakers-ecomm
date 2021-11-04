@@ -1,3 +1,8 @@
+.cartList {
+  list-style: none;
+  /* overflow-y: scroll; */
+}
+
 .cartEmpty {
   font-size: 2rem;
   /* text-align: center; */

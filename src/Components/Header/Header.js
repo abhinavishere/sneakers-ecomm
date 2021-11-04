@@ -4,16 +4,16 @@ import logo from "../../assets/logo.svg";
 import NavBar from "./NavBar";
 import classes from "./Header.module.css";
 import avatar from "../../assets/image-avatar.png";
-import CartWrapper from "../Cart/CartWrapper";
+import CartButton from "../Cart/CartButton";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header className={classes.header}>
       <a href="/">
         <Logo src={logo} alt="Sneakers" />
       </a>
       <NavBar />
-      <CartWrapper />
+      <CartButton onClick={props.onCartButtonClick} />
       <AvatarWrapper>
         <Avatar src={avatar} alt="user avatar" />
       </AvatarWrapper>
