@@ -12,13 +12,9 @@ const ProductForm = (props) => {
     });
   };
   const decrementHandler = () => {
-    if (counterState === 1) {
-      setCounterState(1);
-    } else {
-      setCounterState((prev) => {
-        return prev - 1;
-      });
-    }
+    setCounterState((prev) => {
+      return prev - 1;
+    });
   };
 
   // Using Cart Context

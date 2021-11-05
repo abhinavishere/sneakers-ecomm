@@ -9,10 +9,26 @@ const Cart = (props) => {
   const cartCtx = useContext(CartContext);
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
 
+  const incrementItemHandler = (item) => {
+    cartCtx.addItem({ ...item, amount: 1 });
+  };
+
+  const decrementItemHandler = (id) => {
+    cartCtx.removeItem(id);
+  };
+
   return (
     <Modal onOverlayClick={props.onOverlayClick}>
       <ul className={classes.cartList}>
-        {cartCtx.items && cartCtx.items.map((item) => <CartItem {...item} />)}
+        {cartCtx.items &&
+          cartCtx.items.map((item) => (
+            <CartItem
+              key={item.id}
+              {...item}
+              onAdd={incrementItemHandler.bind(null, item)}
+              onRemove={decrementItemHandler.bind(null, item.id)}
+            />
+          ))}
         {cartCtx.items.length === 0 && (
           <h3 className={classes.cartEmpty}>Your Cart is Empty</h3>
         )}
@@ -27,7 +43,7 @@ const Cart = (props) => {
           >
             Close
           </ButtonComponent>
-          <ButtonComponent type="submit" primary={true}>
+          <ButtonComponent type="button" primary={true}>
             Place Order
           </ButtonComponent>
         </div>
